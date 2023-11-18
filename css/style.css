@@ -14,6 +14,7 @@
 
 body {
     overflow-x: hidden;
+    text-rendering: optimizeLegibility;
 }
 
 .navbar {
@@ -79,6 +80,15 @@ body {
   background-color: transparent; 
 }
 
+.form-control {
+  height: auto;
+}
+
+.btn.btn-outline-dark {
+  text-align: center;
+  padding: 0.375rem 0.75rem; 
+  margin: auto;
+}
 
 
 
@@ -131,14 +141,22 @@ main {
   font-weight: 900;
   padding: 20px;
   text-transform: uppercase;
-  transition: box-shadow .5s ease-in-out,
-              transform .5s ease-in-out;
+  transition: box-shadow .5s ease-in-out, transform .5s ease-in-out;
 }
 
 .btn:hover {
   box-shadow: 3px 10px 20px rgba(0,0,0,.3);
   transform: translateY(-5px);
 }
+
+.conheca:hover{
+  color: white;
+}
+
+.vermais:hover {
+  color: white; 
+}
+
 
 .info-btns {
   display: flex;
@@ -302,7 +320,7 @@ color: #fff;
   right: 0;
   background: #ff5e14;
   padding: 13px 20px;
-  border: 1px solid #ff5e14;
+  border: 1px solid white;
   top: 0;
 }
 .subscribe-form button i {
@@ -320,14 +338,14 @@ font-size: 14px;
 color: #878787;
 }
 .copyright-text p a{
-color: #ff5e14;
+color: white;
 }
 .footer-menu li {
 display: inline-block;
 margin-left: 20px;
 }
 .footer-menu li:hover a{
-color: #ff5e14;
+color: white;
 }
 .footer-menu li a {
 font-size: 14px;
@@ -335,6 +353,188 @@ color: #878787;
 }
 
 
+
+
+a.btn {
+  background: black;
+  border-radius: 4px;
+	box-shadow: 0 2px 0px 0 rgba(0,0,0,0.25);
+  color: white;
+  display: inline-block;
+  padding: 6px 30px 8px;
+  position: relative;
+  text-decoration: none;
+	transition: all 0.1s 0s ease-out;
+}
+
+.no-touch a.btn:hover {
+  background: lighten(blue,2.5);
+  box-shadow: 0px 8px 2px 0 rgba(0, 0, 0, 0.075);
+  transform: translateY(-2px);
+  transition: all 0.25s 0s ease-out;
+}
+
+.no-touch a.btn:active,
+a.btn:active {
+  background: darken(blue,2.5);
+  box-shadow: 0 1px 0px 0 rgba(255,255,255,0.25);
+  transform: translate3d(0,1px,0);
+  transition: all 0.025s 0s ease-out;
+}
+
+div.cards {
+  margin: 80px auto;
+  max-width: 960px;
+  text-align: center;
+}
+
+div.card {
+  background: white;
+  display: inline-block;
+  margin: 8px;
+  max-width: 300px;
+  perspective: 1000;
+  position: relative;
+  text-align: left;
+  transition: all 0.3s 0s ease-in;
+  width: 300px;
+  z-index: 1;
+
+  img {
+    max-width: 300px;
+  }
+  
+  .card__image-holder {
+    background: rgba(0,0,0,0.1);
+    height: 0;
+    padding-bottom: 75%;
+  }
+
+  div.card-title {
+    background: white;
+    padding: 6px 15px 10px;
+    position: relative;
+    z-index: 0;
+    
+    a.toggle-info {
+      border-radius: 32px;
+      height: 32px;
+      padding: 0;
+      position: absolute;
+      right: 15px;
+      top: 10px;
+      width: 32px;
+      
+      span {
+        background: white;
+        display: block;
+        height: 2px;
+        position: absolute;
+        top: 16px;
+        transition: all 0.15s 0s ease-out;
+        width: 12px;
+      }
+      
+      span.left {
+        right: 14px;
+        transform: rotate(45deg);
+      }
+      span.right {
+        left: 14px;
+        transform: rotate(-45deg);
+      }
+    }
+    
+    h2 {
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: -0.05em;
+      margin: 0;
+      padding: 0;
+      
+      small {
+        display: block;
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: -0.025em;
+      }
+    }
+  }
+
+  div.card-description {
+    padding: 0 15px 10px;
+    position: relative;
+    font-size: 14px;
+  }
+
+  div.card-actions {
+  	box-shadow: 0 2px 0px 0 rgba(0,0,0,0.075);
+    padding: 10px 15px 20px;
+    text-align: center;
+  }
+  
+  div.card-flap {
+    background: darken(white,15);
+    position: absolute;
+    width: 100%;
+    transform-origin: top;
+    transform: rotateX(-90deg);
+  }
+  div.flap1 {
+    transition: all 0.3s 0.3s ease-out;
+    z-index: -1;
+  }
+  div.flap2 {
+    transition: all 0.3s 0s ease-out;
+    z-index: -2;
+  }
+  
+}
+
+div.cards.showing {
+  div.card {
+    cursor: pointer;
+    opacity: 0.6;
+    transform: scale(0.88);
+  }
+}
+
+.no-touch  div.cards.showing {
+  div.card:hover {
+    opacity: 0.94;
+    transform: scale(0.92);
+  }
+}
+
+div.card.show {
+  opacity: 1 !important;
+  transform: scale(1) !important;
+
+  div.card-title {
+    a.toggle-info {
+      background: salmon !important;
+      span {
+        top: 15px;
+      }
+      span.left {
+        right: 10px;
+      }
+      span.right {
+        left: 10px;
+      }
+    }
+  }
+  div.card-flap {
+    background: white;
+    transform: rotateX(0deg);
+  }
+  div.flap1 {
+    transition: all 0.3s 0s ease-out;
+  }
+  div.flap2 {
+    transition: all 0.3s 0.2s ease-out;
+  }
+}
 
 
 
@@ -348,27 +548,48 @@ color: #878787;
 
 @media (max-width: 991.98px) {
   .buy {
-    margin-top: 15px;
     font-size: 1;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 10px;
+  }
+  .navbar-nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+  .nav-item {
+    flex: 1;
+    text-align: center;
   }
 }
 
 @media screen and (max-width: 1200px) {
   .product-info > h1 {
     font-size: 2.2rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .product-info > p {
     font-size: 1rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .product-info > h2 {
     font-size: 1.25rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .btn {
-    font-size: .7rem;
-    padding: 15px;
+  font-size: 0.7rem; 
+  padding: 8px 12px;
 }
 .right > img {
   left: -80px;
@@ -377,7 +598,8 @@ color: #878787;
   
 @media screen and (max-width: 900px) {
   .right > img {
-    left: -60px;
+    position: relative;
+    left: +0px;
   }
 }
 
@@ -411,6 +633,5 @@ color: #878787;
         background-color: 	#C0C0C0; 
         transition: all 0.3s; 
     }
-    
-    
+  
   }
