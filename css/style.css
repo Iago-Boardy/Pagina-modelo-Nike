@@ -1,0 +1,416 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Kanit');
+
+
+* {
+    font-family: 'Kanit', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    transition: all .2s linear;
+    text-decoration: none;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.navbar {
+  border-bottom: 1px solid #D3D3D3; 
+}
+
+
+.nav-link.active::after {
+    content: '';
+    height: 4px; 
+    width: 100%;
+    background-color: #000;
+    display: block;
+    margin-top: -1px;
+    margin-right: -4px;
+}
+
+
+.nav-link:not(.active):hover::after {
+    content: '';
+    height: 4px;
+    width: 100%;
+    background-color: #000;
+    display: block;
+}
+
+
+
+.dropdown-menu {
+    border: none;
+    border-radius: 0;
+    padding: 0.7em;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  }
+
+.dropdown-menu ul{
+    list-style: none;
+    padding: 0;
+}
+
+.dropdown-menu.show{
+    display: flex;
+}
+
+.dropdown-menu li a{
+    color: gray;
+    padding: .5em 1em;
+}
+
+.dropdown-menu li:first-child a {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: black
+  }
+
+  .dropdown-toggle::after {
+    display: none; 
+}
+
+.btn.btn-outline-dark:hover {
+  transform: translateY(-3px); 
+  color: #D3D3D3; 
+  background-color: transparent; 
+}
+
+
+
+
+
+main {
+  display: flex;
+  height: calc(100vh - 70px);
+}
+
+.left {
+  background-color: #f7f7f6;
+  flex: 1;
+  height: 100%;
+}
+
+.product-info {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.product-info > h1 {
+  font-size: 3.2rem;
+  letter-spacing: 3px;
+  margin-right: -3px;
+  font-weight: 100;
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.product-info > p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.product-info > h2 {
+  font-size: 1.56rem;
+  margin-bottom: 20px;
+}
+
+.btn {
+  color: #f7f7f6;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 900;
+  padding: 20px;
+  text-transform: uppercase;
+  transition: box-shadow .5s ease-in-out,
+              transform .5s ease-in-out;
+}
+
+.btn:hover {
+  box-shadow: 3px 10px 20px rgba(0,0,0,.3);
+  transform: translateY(-5px);
+}
+
+.info-btns {
+  display: flex;
+}
+
+.discover-btn {
+  background-color: #a4a4a4;
+}
+
+.cart-btn {
+  background-color: #141110;
+}
+
+.right {
+  background-color: #f9e2ba;
+  flex: 1;
+  height: 100%;
+  position: relative;
+}
+
+.right > img {
+  position: absolute;
+  left: -150px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+
+
+
+
+.footer-section {
+background: #151414;
+position: relative;
+}
+.footer-cta {
+border-bottom: 1px solid #373636;
+text-transform: none !important; 
+}
+.single-cta i {
+color: #ff5e14;
+font-size: 30px;
+float: left;
+margin-top: 8px;
+}
+.cta-text {
+padding-left: 15px;
+display: inline-block;
+}
+.cta-text h4 {
+color: #fff;
+font-size: 20px;
+font-weight: 600;
+margin-bottom: 2px;
+}
+.cta-text span {
+color: #757575;
+font-size: 15px;
+}
+.footer-content {
+position: relative;
+z-index: 2;
+}
+.footer-pattern img {
+position: absolute;
+top: 0;
+left: 0;
+height: 330px;
+background-size: cover;
+background-position: 100% 100%;
+}
+.footer-logo {
+margin-bottom: 30px;
+}
+.footer-logo img {
+  max-width: 200px;
+}
+.footer-text p {
+margin-bottom: 14px;
+font-size: 14px;
+    color: #7e7e7e;
+line-height: 28px;
+}
+.footer-social-icon span {
+color: #fff;
+display: block;
+font-size: 20px;
+font-weight: 700;
+font-family: 'Poppins', sans-serif;
+margin-bottom: 20px;
+}
+.footer-social-icon a {
+color: #fff;
+font-size: 16px;
+margin-right: 15px;
+}
+.footer-social-icon i {
+height: 40px;
+width: 40px;
+text-align: center;
+line-height: 38px;
+border-radius: 50%;
+}
+.facebook-bg{
+background: #3B5998;
+}
+.twitter-bg{
+background: #55ACEE;
+}
+.google-bg{
+background: #DD4B39;
+}
+.footer-widget-heading h3 {
+color: #fff;
+font-size: 20px;
+font-weight: 600;
+margin-bottom: 40px;
+position: relative;
+}
+.footer-widget-heading h3::before {
+content: "";
+position: absolute;
+left: 0;
+bottom: -15px;
+height: 2px;
+width: 50px;
+background: #ff5e14;
+}
+.footer-widget ul li {
+display: inline;
+float: left;
+width: 50%;
+margin-bottom: 12px;
+}
+.footer-widget ul li a:hover{
+color: #ff5e14;
+}
+.footer-widget ul li a {
+color: #878787;
+text-transform: capitalize;
+}
+.subscribe-form {
+position: relative;
+overflow: hidden;
+}
+.subscribe-form input {
+width: 100%;
+padding: 14px 28px;
+background: #2E2E2E;
+border: 1px solid #2E2E2E;
+color: #fff;
+}
+.subscribe-form button {
+  position: absolute;
+  right: 0;
+  background: #ff5e14;
+  padding: 13px 20px;
+  border: 1px solid #ff5e14;
+  top: 0;
+}
+.subscribe-form button i {
+color: #fff;
+font-size: 22px;
+transform: rotate(-6deg);
+}
+.copyright-area{
+background: #202020;
+padding: 25px 0;
+}
+.copyright-text p {
+margin: 0;
+font-size: 14px;
+color: #878787;
+}
+.copyright-text p a{
+color: #ff5e14;
+}
+.footer-menu li {
+display: inline-block;
+margin-left: 20px;
+}
+.footer-menu li:hover a{
+color: #ff5e14;
+}
+.footer-menu li a {
+font-size: 14px;
+color: #878787;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 991.98px) {
+  .buy {
+    margin-top: 15px;
+    font-size: 1;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .product-info > h1 {
+    font-size: 2.2rem;
+}
+
+.product-info > p {
+    font-size: 1rem;
+}
+
+.product-info > h2 {
+    font-size: 1.25rem;
+}
+
+.btn {
+    font-size: .7rem;
+    padding: 15px;
+}
+.right > img {
+  left: -80px;
+}
+}
+  
+@media screen and (max-width: 900px) {
+  .right > img {
+    left: -60px;
+  }
+}
+
+
+@media only screen and (min-width: 992px) {
+    .dropdown:hover .dropdown-menu {
+      display: flex;
+    }
+    .dropdown-menu.show {
+      display: flex;
+    }
+  }
+
+
+@media only screen and (max-width: 992px) {
+    .dropdown:hover .dropdown-menu {
+      max-height: 350px;
+      overflow-y: scroll;
+    }
+
+    .nav-link::after {
+        display: none !important; 
+    }
+    
+    .nav-link:hover::after {
+        display: none !important; 
+    }
+    
+    .nav-link:hover {
+        color: black !important; 
+        background-color: 	#C0C0C0; 
+        transition: all 0.3s; 
+    }
+    
+    
+  }
